@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+:root
+{
+    --principal: #25282D;  
+    --bac: #f5f5f5;
+}
+
+.inicio
+{
+    background: var(--bac);
+    padding-inline: 100px;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.inicio header
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+/*============LOGO==============*/
+
+.inicio header .logo
+{
+    height: 100px;
+    width: auto;
+}
+
+.inicio header .logo img
+{
+    width: 100%;
+    height: 100%;   
+}
+/*============MENU==============*/
+
+.inicio header .menu ul
+{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.inicio header .menu ul li
+{
+    list-style: none;
+}
+
+.inicio header .menu ul li a
+{
+    color: var(--principal);
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 16px;
+    padding: 8px 16px;
+    transition: .3s ease-in;
+    
+}
+
+.inicio header .menu ul li.sel a
+{
+    position: relative;
+}
+
+.inicio header .menu ul li.sel a:hover
+{
+    box-shadow: 0px 24px 74px #25282d00;
+}
+
+.inicio header .menu ul li.sel a::before
+{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-60%);
+    width: 18px;
+    height: 3px;
+    border-radius: 8px;
+    background: var(--principal);
+    box-shadow: 0 0 3px var(--principal);
+    
+}
+
+.inicio header .menu ul li a:hover
+{
+    box-shadow: 0px 24px 74px #25282d4b;
+}
+
+/*===========conteudo===========*/
+
+.cont-inicio
+{
+    display: flex;
+    
+    padding-inline-start: 10px;
+    justify-content: space-between;
+}
+
+.cont-inicio .text 
+{
+    padding-block: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.cont-inicio .text .comprimentos h2
+{
+    font-weight: 600;
+}
+
+.cont-inicio .text .comprimentos h2 span
+{
+    font-weight: 700;
+    color: #D5465A;
+}
+
+.cont-inicio .text .comprimentos h1
+{
+    font-size: 3.5em;
+}
+
+.cont-inicio .text .comprimentos p
+{
+    font-weight: 600;
+    padding-inline-start: 10px;
+    width: 500px;
+}
+
+.cont-inicio .text .botoes
+{
+    display: flex;
+    gap: 16px;
+    padding-top: 50px;
+}
+
+.cont-inicio .text .botoes a
+{
+    display: flex;
+    align-items: center;
+    gap: 8px ;
+    padding:8px 24px ;
+    text-decoration: none;
+    border: 2px solid var(--principal);
+    background: var(--principal);
+    color: var(--bac);
+    border-radius: 12px;
+   
+}
+
+.cont-inicio .text .botoes a:nth-child(1)
+{
+    background: transparent;
+    color: var(--principal);
+}
+
+.cont-inicio .text .botoes a p
+{
+    font-size: 16px;
+}
+
+.cont-inicio .text .botoes a ion-icon
+{
+    font-size: 24px;
+}
+
+/*=================fotot===================*/
+
+.cont-inicio .imagem
+{
+    margin-right:22px ;
+    width: auto ;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+    margin-right: 100px;
+    z-index: 1;
+    transform: translateY(-34px);
+    
+}
+
+.cont-inicio .imagem::before
+{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to top,var(--bac) ,transparent);
+}
+
+
+.cont-inicio .imagem img
+{
+    width: 100%;
+    height: 100%;
+}
