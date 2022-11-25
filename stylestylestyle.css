@@ -14,6 +14,7 @@
 {
     --principal: #25282D;  
     --bac: #f5f5f5;
+    --sec: #D5465A;
 }
 
 .inicio
@@ -65,22 +66,28 @@
     text-decoration: none;
     font-weight: 500;
     border-radius: 16px;
-    padding: 8px 16px;
-    transition: .3s ease-in;
+    padding: 4px 16px;
+    transition: .3s ease-in-out; 
     
+}
+
+/* .inicio header .menu ul li.sel a
+{
+    position: relative;
+} */
+
+.inicio header .menu ul li a:hover
+{
+    color: var(--sec);
 }
 
 .inicio header .menu ul li.sel a
 {
-    position: relative;
+    background: var(--sec);
+    color: var(--bac);
 }
 
-.inicio header .menu ul li.sel a:hover
-{
-    box-shadow: 0px 24px 74px #25282d00;
-}
-
-.inicio header .menu ul li.sel a::before
+/* .inicio header .menu ul li.sel a::before
 {
     content: "";
     position: absolute;
@@ -93,12 +100,11 @@
     background: var(--principal);
     box-shadow: 0 0 3px var(--principal);
     
-}
+} */
 
-.inicio header .menu ul li a:hover
-{
-    box-shadow: 0px 24px 74px #25282d4b;
-}
+
+
+
 
 /*===========conteudo===========*/
 
@@ -126,7 +132,7 @@
 .cont-inicio .text .comprimentos h2 span
 {
     font-weight: 700;
-    color: #D5465A;
+    color: var(--sec);
 }
 
 .cont-inicio .text .comprimentos h1
@@ -159,13 +165,25 @@
     background: var(--principal);
     color: var(--bac);
     border-radius: 12px;
-   
+    transition: .3s ease-in-out;
+}
+.cont-inicio .text .botoes a:hover
+{
+    background: var(--sec);
+    border: 2px solid var(--sec);
 }
 
 .cont-inicio .text .botoes a:nth-child(1)
 {
     background: transparent;
     color: var(--principal);
+}
+
+.cont-inicio .text .botoes a:nth-child(1):hover
+{
+    border: 2px solid var(--sec);
+    background: transparent;
+    color: var(--sec);
 }
 
 .cont-inicio .text .botoes a p
@@ -199,7 +217,7 @@
     position: absolute;
     bottom: 15px;
     left: 0;
-    transform: rotate(-15deg);
+    transform: rotate(-10deg);
     width: 100%;
     height: 90px;
     background: linear-gradient(to top,var(--bac) 45%, #f5f5f5b9,transparent);
@@ -217,4 +235,90 @@
 .sobre
 {
     background: var(--bac);
+    padding: 100px;
+    
 }
+
+.sobre .supercard
+{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.sobre .supercard .texto-rede-social .texto h2
+{
+    border-left: 5px solid var(--sec);
+    padding-inline: 8px;
+    font-size: 28px;
+    text-transform: uppercase;
+
+}
+.sobre .supercard .texto-rede-social .texto p
+{
+    margin-top: 32px;
+
+}
+.sobre .supercard .texto-rede-social .texto p span
+{
+   
+    color: var(--sec);
+    font-weight: 700;
+}
+
+.sobre .supercard .texto-rede-social .linha
+{
+    margin-top: 20px;
+    width: 120px;
+    height: 2px;
+    background: var(--principal);
+}
+.sobre .supercard .texto-rede-social .rede-social 
+{
+    margin-top: 40px;
+}
+.sobre .supercard .texto-rede-social .rede-social .net-list
+{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.sobre .supercard .texto-rede-social .rede-social .net-list li
+{
+    list-style: none;
+}
+
+.sobre .supercard .texto-rede-social .rede-social .net-list li a
+{
+    text-decoration: none;
+    color: var(--principal);
+    font-size: 2em;
+    transition: .3s ease ;
+}
+
+.sobre .supercard .texto-rede-social .rede-social .net-list li a:hover
+{
+    color: var(--sec);
+}
+
+/* =================Foto do sobre=====================*/
+
+.sobre .supercard .foto
+{
+    position: relative;
+   
+
+}
+
+.sobre .supercard .foto::before
+{
+    content: "";
+    background: linear-gradient(to top, var(--bac)10%, #f5f5f559, transparent);
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
