@@ -17,6 +17,11 @@
     --sec: #D5465A;
 }
 
+html
+{
+    scroll-behavior: smooth;
+}
+
 .inicio
 {
     background: var(--bac);
