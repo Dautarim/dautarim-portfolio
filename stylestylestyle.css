@@ -22,12 +22,14 @@ html
     scroll-behavior: smooth;
 }
 
+
 .inicio
 {
     background: var(--bac);
     padding-inline: 100px;
     height: 100vh;
     overflow-y: hidden;
+    position: relative;
 }
 
 .inicio header
@@ -35,8 +37,10 @@ html
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition: .3s ease-out;
     
 }
+
 
 /*============LOGO==============*/
 
@@ -116,10 +120,11 @@ html
 .cont-inicio
 {
     display: flex;
-    
-    padding-inline-start: 10px;
+    padding: 0px 0px 0px 10px;
     justify-content: space-between;
+    transition: .3s ease-out;
 }
+
 
 .cont-inicio .text 
 {
@@ -212,7 +217,6 @@ html
     overflow: hidden;
     position: relative;
     margin-right: 100px;
-    z-index: 1;
     transform: translateY(-34px);
     
 }
@@ -426,6 +430,155 @@ html
     font-size: 28px;
     border-left: 5px solid var(--sec);
     padding-left: 8px;
+
 }
 
 
+/*=======slide===================*/
+
+.projetos .slide-de-projetos
+{
+
+    width: 100%;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.projetos .slide-de-projetos .slidess 
+{
+    width: 400%;
+    height: 90%;
+    display: flex;
+    overflow: hidden;
+}
+
+
+
+.projetos .slide-de-projetos .slidess .slide 
+{
+    width: 25%;
+    transition: .8s ease-in;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+/*============Card project================*/
+.projetos .slide-de-projetos .slidess .slide .card-projet
+{
+   width: 250px;
+   position: relative;
+   border-radius: 12px;
+   overflow: hidden;
+   box-shadow: 0px 20px 28px rgba(0, 0, 0, 0.274);
+}
+
+.projetos .slide-de-projetos .slidess .slide .card-projet .sobre-projeto
+{
+    position: absolute;
+    left: 0;
+    bottom: -90%;
+    width: 100%;
+    height: 100%;
+    color: var(--bac);
+    background: rgba(0, 0, 0, 0.26);
+    backdrop-filter: blur(10px);
+    padding: 10px 12px;
+    transition: .8s ease-out;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    gap: 50px;
+}
+
+.projetos .slide-de-projetos .slidess .slide .card-projet:hover .sobre-projeto
+{
+    justify-content: center;
+    bottom: 0px;
+    align-items: center;
+}
+
+.projetos .slide-de-projetos .slidess .slide .card-projet .sobre-projeto h4
+{
+    border-left: 3px solid var(--sec);
+    padding-left: 5px;
+}
+
+.projetos .slide-de-projetos .slidess .slide .card-projet .bx-img-projeto
+{
+    width: 100%;
+   height: 100%;
+   border-radius: 12px;
+
+}
+
+.projetos .slide-de-projetos .slidess .slide .card-projet .bx-img-projeto img
+{
+   
+    width: 100%;
+    height: 100%;
+   
+}
+
+.projetos .slide-de-projetos .controles
+{
+    position: absolute;
+    left: 50%;
+    bottom: 70px;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+
+}
+
+.projetos .slide-de-projetos .controles .control
+{
+    border: 1.5px solid var(--bac);
+    padding: 4px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: color 1s ease;
+    transition: border .3s ease;
+    
+}
+
+.projetos .slide-de-projetos .controles .control.cx
+{
+    background: var(--bac);
+}
+
+.projetos .slide-de-projetos .controles .control.cx:hover
+{
+    border: 1.5px solid var(--bac);
+}
+
+.projetos .slide-de-projetos .controles .control:hover
+{
+    border: 1.5px solid var(--sec);
+}
+
+#slide1:checked ~ .slide.esse
+{
+    margin-left: 0px;
+}
+#slide2:checked ~ .slide.esse
+{
+    margin-left: -25%;
+}
+#slide3:checked ~ .slide.esse
+{
+    margin-left: -50%;
+}
+#slide4:checked ~ .slide.esse
+{
+    margin-left: -75%;
+}
+
+.projetos .slide-de-projetos .slidess input
+{
+    display: none;
+}
