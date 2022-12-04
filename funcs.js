@@ -1,6 +1,6 @@
 
 let contador = 1
-// setInterval(() => rolaslide(), 10000)
+setInterval(() => rolaslide(), 10000)
 
 function rolaslide()
 {
