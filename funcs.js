@@ -1,6 +1,6 @@
 
 let contador = 1
-setInterval(() => rolaslide(), 5000)
+// setInterval(() => rolaslide(), 10000)
 
 function rolaslide()
 {
@@ -34,11 +34,11 @@ addEventListener("scroll", () =>
 {
     if(scrollY > 2)
     {
-       console.log("slv")
+       document.querySelector(".navegador-alternativo").classList.remove("oculto")
     }
     else
     {
-        console.log("oi")
+        document.querySelector(".navegador-alternativo").classList.add("oculto")
     }
 })
 

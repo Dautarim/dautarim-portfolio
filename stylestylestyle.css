@@ -21,8 +21,93 @@ html
 {
     scroll-behavior: smooth;
 }
+body
+{
+    position: relative;
+}
 
+body::-webkit-scrollbar
+{
+    width: 4px;
+    background: transparent;
+}
 
+body::-webkit-scrollbar-thumb
+{
+    background: var(--principal);
+    border-radius: 4px;
+}
+
+.navegador-alternativo
+{
+    position: fixed;
+    right: 0;
+    top: 50%;
+    z-index: 100;
+    transform: translateY(-50%);
+    transition: opacity 1s ease-out;
+}
+
+.navegador-alternativo.oculto
+{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.navegador-alternativo nav
+{
+    border-radius: 12px;
+    background: var(--bac);
+    transition: transform .4s ease-out ;
+    transform: translateX(70%);
+    padding: 12px;
+    box-shadow: 0px 24px 40px #25282d27;
+}
+
+.navegador-alternativo:hover nav
+{
+    transform: translateX(10%);
+}
+
+.navegador-alternativo nav ul
+{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.navegador-alternativo nav ul li
+{
+    list-style: none;
+}
+
+.navegador-alternativo nav ul li a
+{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: var(--principal);
+    text-decoration: none;
+    padding: 4px 8px;
+    transition: .4s ease-out;
+    border-radius: 12px;
+}
+.navegador-alternativo nav ul li.sel a
+{
+    background: var(--sec);
+    color: var(--bac);
+}
+.navegador-alternativo nav ul li a:hover
+{
+    background: var(--sec);
+    color: var(--bac);
+}
+
+.navegador-alternativo nav ul li a ion-icon
+{
+    font-size: 1.5em;
+}
+
+/* =================Inicio==================*/
 .inicio
 {
     background: var(--bac);
@@ -469,6 +554,7 @@ html
 .projetos .slide-de-projetos .slidess .slide .card-projet
 {
    width: 250px;
+   height: 150px;
    position: relative;
    border-radius: 12px;
    overflow: hidden;
@@ -484,7 +570,7 @@ html
     height: 100%;
     color: var(--bac);
     background: rgba(0, 0, 0, 0.26);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
     padding: 10px 12px;
     transition: .8s ease-out;
 
@@ -508,6 +594,23 @@ html
     padding-left: 5px;
 }
 
+.projetos .slide-de-projetos .slidess .slide .card-projet .sobre-projeto p a
+{
+    color: var(--sec);
+    text-decoration: none;
+    padding: 4px 12px ;
+    transition: .4s ease-out;
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    gap: 12px;
+}
+.projetos .slide-de-projetos .slidess .slide .card-projet .sobre-projeto p a:hover
+{
+    background: var(--sec);
+    color: var(--bac);
+}
+
 .projetos .slide-de-projetos .slidess .slide .card-projet .bx-img-projeto
 {
     width: 100%;
@@ -518,7 +621,7 @@ html
 
 .projetos .slide-de-projetos .slidess .slide .card-projet .bx-img-projeto img
 {
-   
+   object-fit: cover;
     width: 100%;
     height: 100%;
    
