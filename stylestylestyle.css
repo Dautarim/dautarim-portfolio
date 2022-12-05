@@ -506,7 +506,7 @@ body::-webkit-scrollbar-thumb
 .projetos
 {
     background: var(--principal);
-    padding: 0px 100px 100px  100px;
+    padding: 0px 100px ;
 }
 
 .projetos h2
@@ -684,4 +684,76 @@ body::-webkit-scrollbar-thumb
 .projetos .slide-de-projetos .slidess input
 {
     display: none;
+}
+
+
+
+
+/*=================Footer=============*/
+
+footer
+{
+    background: var(--principal);
+  
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+footer .linha
+{
+    height: 1px;
+    width: 80%;
+    background: var(--bac);
+    margin: 0px auto;
+    margin-bottom: 80px;
+}
+
+footer .nome
+{
+ 
+}
+
+footer .nome h2
+{
+    color: var(--bac);
+    font-weight: 600;
+}
+
+footer .rede-social
+{
+    margin-top: 32px;
+}
+
+footer .rede-social .net-list
+{
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+footer .rede-social .net-list li
+{
+    list-style: none;
+}
+
+footer .rede-social .net-list li:hover a
+{
+    color: var(--sec);
+}
+
+footer .rede-social .net-list li a
+{
+    color: var(--bac);
+    font-size: 1.5em;
+    transition: .3s ease;
+}
+
+footer > p
+{
+    margin-top: 50px;
+    color: var(--bac);
+    font-weight: 300;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1.5px;
+    padding: 24px 8px;
 }
