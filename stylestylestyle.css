@@ -533,7 +533,7 @@ body::-webkit-scrollbar-thumb
 .projetos .slide-de-projetos .slidess 
 {
     width: 400%;
-    height: 90%;
+    height: 80%;
     display: flex;
     overflow: hidden;
 }
@@ -549,6 +549,36 @@ body::-webkit-scrollbar-thumb
     justify-content: space-around;
 
 }
+
+/*============O que eu faço=====================*/
+
+.servicos
+{
+    padding-inline: 100px;
+    background: var(--principal);
+    padding-bottom: 50px;
+}
+
+.servicos h2
+{
+    color: var(--bac);
+    font-size: 28px;
+    border-left: 5px solid var(--sec);
+    padding-left: 8px;
+}
+
+.what-i-do-card
+{
+    margin-top: 50px;
+    display: flex;
+    gap: 28px;
+    align-items: center;
+    justify-content: center;
+}
+
+/*===========Card giratorio======================*/
+
+ 
 
 /*============Card project================*/
 .projetos .slide-de-projetos .slidess .slide .card-projet
