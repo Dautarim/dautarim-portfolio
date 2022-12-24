@@ -57,3 +57,22 @@ function eucx(nummero)
         }
     }
 }
+
+
+
+var imputmail = document.querySelector("#endereco");
+var assunt = document.querySelector("#assunto");
+var message = document.querySelector("#mensagem")
+const botenv = document.querySelector("#bot")
+
+botenv.addEventListener("click", () => {
+    var email = imputmail.value
+    var ass = assunt.value
+    var msg = message.value
+
+    if(email && ass && msg)
+    {
+        window.location.href =`mailto:carvalhodeandrelino@gmail.com?CC=${email}&Subject=${ass}&Body=${msg}`
+    }
+
+})

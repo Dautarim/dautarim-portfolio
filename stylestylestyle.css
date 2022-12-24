@@ -811,12 +811,22 @@ body::-webkit-scrollbar-thumb
 .formulario .meter:first-child{
     margin-bottom:35px ;
 }
-
 .formulario .meter:nth-child(3)
 {
-    height: 100px;
+    margin-top: 30px;
 }
 
+.formulario .meter:nth-child(4)
+{
+    height: 100px;
+    margin-top: 30px;
+}
+
+.formulario .meter:nth-child(3) input,
+.formulario .meter:nth-child(4) input
+{
+    font-size: small;
+}
 
 .formulario .meter input{
 
@@ -865,6 +875,10 @@ body::-webkit-scrollbar-thumb
     transition: .3s;
     background: var(--sec);
     border: none;
+    text-decoration: none;
+    color: var(--bac);
+    border-radius: 8px;
+   
 }
 
 .formulario .meter #bot:hover{
@@ -882,7 +896,7 @@ body::-webkit-scrollbar-thumb
    flex-wrap: wrap;
 }
 .card {
-    width: 12rem;
+    width: 10rem;
     cursor: pointer;
     margin: 24px;
   }
