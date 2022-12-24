@@ -64,6 +64,8 @@ body::-webkit-scrollbar-thumb
     box-shadow: 0px 24px 40px #25282d27;
 }
 
+
+
 .navegador-alternativo:hover nav
 {
     transform: translateX(10%);
@@ -567,17 +569,56 @@ body::-webkit-scrollbar-thumb
     padding-left: 8px;
 }
 
-.what-i-do-card
+.what-i-do
 {
     margin-top: 50px;
     display: flex;
-    gap: 28px;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    gap: 44px;
+    max-width: 90%;
+   
 }
 
-/*===========Card giratorio======================*/
+.what-i-do .item
+{
+    color: var(--bac);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 24px;
+    padding: 20px 24px;
+    text-align: center;
+    transition: .3s ease-in;
+    border: 2px solid transparent;
+}
 
+.what-i-do .item:hover
+{
+    color: var(--sec);
+    border: 2px solid var(--sec);
+}
+
+.what-i-do .item ion-icon
+{
+    font-size: 52px;
+    margin-bottom: 12px;
+}
+
+.what-i-do .item p 
+{
+   font-size: .9em;
+   max-width: 200px;
+   text-align: justify;
+}
+
+.what-i-do .item h4
+{
+    font-size: 1.4em;
+    margin-bottom: 8px;
+}
  
 
 /*============Card project================*/
@@ -716,8 +757,268 @@ body::-webkit-scrollbar-thumb
     display: none;
 }
 
+/*=================Contato=================*/
+
+.contato
+{
+    padding-inline: 100px;
+    background: var(--principal);
+    padding-bottom: 50px;
+}
+
+.contato h2
+{
+    color: var(--bac);
+    font-size: 28px;
+    border-left: 5px solid var(--sec);
+    padding-left: 8px;
+    margin-bottom: 50px;
+}
+
+.conteudo
+{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    justify-content: center;
+}
+
+.formulario
+{
+    border-right: 1px solid var(--bac);
+    padding: 50px;
+}
+
+.formulario h3
+{
+    margin-bottom: 32px;
+    color: var(--bac);
+    border-left: 5px solid var(--sec);
+    padding-left: 8px;
+    margin-bottom: 50px;
+}
+
+.formulario .meter{
+
+    position: relative;
+    width: 300px;
+    height: 45px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.096);
+
+}
+
+.formulario .meter:first-child{
+    margin-bottom:35px ;
+}
+
+.formulario .meter:nth-child(3)
+{
+    height: 100px;
+}
 
 
+.formulario .meter input{
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    font-weight: 300;
+
+}
+
+.formulario .meter label{
+
+    position: absolute;
+    font-size: 15px;
+    top: 1px;
+    left: 1px;
+    padding: 10px;
+    color: rgb(241, 237, 237);
+    font-weight: 400;
+    transition: .5s;
+}
+
+.formulario .meter input:focus ~label,
+.formulario .meter input:valid ~label
+{
+    transform: translateY(-35px) translateX(-10px);
+    color:  rgb(255, 251, 251);
+    font-weight: 500;
+
+}
+
+.formulario .meter #bot
+{
+    cursor: pointer;
+    padding: 8px 16px;
+    transition: .3s;
+    background: var(--sec);
+    border: none;
+}
+
+.formulario .meter #bot:hover{
+
+    background: #d85a6b;
+
+}
+
+/*==============card giratorio===================*/
+.cards-rd
+{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-wrap: wrap;
+}
+.card {
+    width: 12rem;
+    cursor: pointer;
+    margin: 24px;
+  }
+
+  /*===Para facebook===*/
+
+  .card:nth-child(2) .content
+  {
+    background-color: #1977F3;
+  }
+
+  .card:nth-child(2) .description:hover
+  {
+    background: #1977F3;
+    border: 1px solid #1977F3;
+  }
+  
+  /*===Para email===*/
+
+  .card:nth-child(4) .content
+  {
+    background-color: #EA4335;
+  }
+
+  .card:nth-child(4) .description:hover
+  {
+    background: #EA4335;
+    border: 1px solid #EA4335;
+  }
+
+  /*===Para linkedin===*/
+
+  .card:nth-child(3) .content
+  {
+    background-color: #2867B2;
+  }
+
+  .card:nth-child(3) .description:hover
+  {
+    background: #2867B2;
+    border: 1px solid #2867B2;
+  }
+   /*===Para instagram===*/
+  
+   .card:nth-child(5) .content
+   {
+     
+     background: linear-gradient(43deg, #7909EF 0%, #F0025C 46%, #EEC600 100%);
+     ;
+   }
+ 
+   .card:nth-child(5) .description:hover
+   {
+     background: #EEC600;
+     border: 1px solid #EEC600;
+   }
+
+   /*===Para github===*/
+
+   .card:nth-child(6) .content
+  {
+    background-color:  #4A2979;
+  }
+
+  .card:nth-child(6) .description:hover
+  {
+    background:  #4A2979;
+    border: 1px solid  #4A2979;
+  }
+
+
+ 
+
+.content {
+    text-align: center;
+    position: relative;
+    transition: all 1s ease-out;
+    background-color: #35BD36;
+    padding: 5em;
+    transform-style: preserve-3d;
+    color: var(--bac);
+    border-radius: 12px;
+  }
+  
+  .card:hover .content {
+    transform: rotateY(0.5turn);
+  }
+  
+  .front,
+  .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 2em;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    border-radius: 12px;
+  }
+  
+  .title {
+    transform: translateZ(5rem);
+    font-size: 4rem;
+  }
+  
+  .subtitle {
+    transform: translateZ(2rem);
+  }
+  
+  .back {
+    transform: rotateY(0.5turn);
+    background-color: var(--bac);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .description {
+    transform: translateZ(3rem);
+    color: var(--principal);
+    border: 1px solid var(--principal);
+    text-decoration: none;
+    padding: 4px 12px ;
+    transition: .3s ease-in;
+    border-radius: 12px;
+  }
+
+  .description:hover
+  {
+    background: #35BD36;
+    border: 1px solid #35BD36;
+    color: var(--bac);
+
+  }
+  
 
 /*=================Footer=============*/
 
