@@ -548,78 +548,11 @@ body::-webkit-scrollbar-thumb
     transition: .8s ease-in;
     display: flex;
     align-items: center;
+    gap: 20px;
     justify-content: space-around;
 
 }
 
-/*============O que eu faço=====================*/
-
-.servicos
-{
-    padding-inline: 100px;
-    background: var(--principal);
-    padding-bottom: 50px;
-}
-
-.servicos h2
-{
-    color: var(--bac);
-    font-size: 28px;
-    border-left: 5px solid var(--sec);
-    padding-left: 8px;
-}
-
-.what-i-do
-{
-    margin-top: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 44px;
-    max-width: 90%;
-   
-}
-
-.what-i-do .item
-{
-    color: var(--bac);
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    border-radius: 24px;
-    padding: 20px 24px;
-    text-align: center;
-    transition: .3s ease-in;
-    border: 2px solid transparent;
-}
-
-.what-i-do .item:hover
-{
-    color: var(--sec);
-    border: 2px solid var(--sec);
-}
-
-.what-i-do .item ion-icon
-{
-    font-size: 52px;
-    margin-bottom: 12px;
-}
-
-.what-i-do .item p 
-{
-   font-size: .9em;
-   max-width: 200px;
-   text-align: justify;
-}
-
-.what-i-do .item h4
-{
-    font-size: 1.4em;
-    margin-bottom: 8px;
-}
- 
 
 /*============Card project================*/
 .projetos .slide-de-projetos .slidess .slide .card-projet
@@ -756,6 +689,76 @@ body::-webkit-scrollbar-thumb
 {
     display: none;
 }
+
+
+/*============O que eu faço=====================*/
+
+.servicos
+{
+    padding-inline: 100px;
+    background: var(--principal);
+    padding-bottom: 50px;
+}
+
+.servicos h2
+{
+    color: var(--bac);
+    font-size: 28px;
+    border-left: 5px solid var(--sec);
+    padding-left: 8px;
+}
+
+.what-i-do
+{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 44px;
+    max-width: 90%;
+   
+}
+
+.what-i-do .item
+{
+    color: var(--bac);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 24px;
+    padding: 20px 24px;
+    text-align: center;
+    transition: .3s ease-in;
+    border: 2px solid transparent;
+}
+
+.what-i-do .item:hover
+{
+    color: var(--sec);
+    border: 2px solid var(--sec);
+}
+
+.what-i-do .item ion-icon
+{
+    font-size: 52px;
+    margin-bottom: 12px;
+}
+
+.what-i-do .item p 
+{
+   font-size: .9em;
+   max-width: 200px;
+   text-align: justify;
+}
+
+.what-i-do .item h4
+{
+    font-size: 1.4em;
+    margin-bottom: 8px;
+}
+ 
 
 /*=================Contato=================*/
 
@@ -1101,4 +1104,132 @@ footer > p
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 1.5px;
     padding: 24px 8px;
+}
+
+/*========Responsividade===========*/
+
+@media (max-width: 1200px) 
+{
+
+    /*====Navegador Alternativo=====*/
+    /* .navegador-alternativo.oculto
+    {
+        opacity: 1;
+        visibility: visible;
+    } */
+
+       .navegador-alternativo nav ul li a ion-icon
+    {
+        font-size: 1em;
+    }
+
+        .navegador-alternativo nav ul li a
+    {       
+        gap: 8px;
+        padding: 2px 4px;
+    }
+
+        .navegador-alternativo nav
+    {
+        transform: translateX(74%);
+    }
+
+    /*======padding inline que era 100px======*/
+ 
+        .inicio,.sobre,.projetos,.contato,.servicos
+    {
+        padding-inline: 50px;
+    }
+
+
+}
+
+@media (max-width: 1000px) 
+{
+    .inicio,.sobre,.projetos,.contato,.servicos
+    {
+        padding-inline: 25px;
+    }
+
+    .cont-inicio .imagem {
+       
+        height: 500px;
+        transform: translateY(54px);
+        margin-right: 50px;
+    }
+
+    .cont-inicio .text .botoes {
+        padding-top: 20px;
+    }
+
+    .sobre
+    {
+        padding-top: 50px;
+    }
+
+    .sobre .supercard {
+        gap: 0px;
+    }
+
+    .sobre .supercard .foto {
+        height: 350px;
+        width: auto;
+    }
+
+    .sobre .supercard .foto img {
+       height: 100%;
+    }
+
+    .sobre .supercard .foto::before {   
+        transform: rotate(10deg) translate(-10px, 20px);
+    }
+
+    .sobre .supercard .texto-rede-social .texto h2 {      
+        font-size: 20px;
+    }
+
+    .sobre .supercard .texto-rede-social .texto p {
+        margin-top: 10px;
+        font-size: 14px;
+        padding-right: 28px;
+    }
+
+    .sobre .supercard .texto-rede-social .rede-social {
+        margin-top: 20px;
+    }
+
+    .sobre .supercard .texto-rede-social .rede-social .net-list li a {
+        font-size: 1.5em;
+    }
+
+    /*-====Hbilidades====*/
+
+    .habilidades {
+        padding: 150px 50px;
+    }
+    .habilidades .lista-de-habilidades
+    {
+        justify-content: center;
+    }
+
+    .habilidades .lista-de-habilidades li {
+        width: 150px; 
+    }
+
+    .habilidades .lista-de-habilidades li ion-icon {
+        font-size: 3em;
+    }
+
+    /*-====serviços====*/
+
+    .what-i-do .item ion-icon {
+        font-size: 40px;
+        margin-bottom: 12px;
+    }
+
+    .what-i-do .item p {
+        font-size: .8em;
+        max-width: 150px;
+        text-align: center;
+    }
 }
