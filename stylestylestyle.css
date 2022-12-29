@@ -1232,4 +1232,177 @@ footer > p
         max-width: 150px;
         text-align: center;
     }
+
+    /*==============contatcteme=============*/
+
+    .cards-rd {
+        gap: 20px;
+    }
+
+    .card {
+        width: 7rem;
+    }
+
+    .formulario {
+
+        padding: 10px;
+    }
+}
+
+@media (max-width: 870px) 
+{
+    .inicio header .menu ul li a {
+        padding: 4px 10px;     
+    }
+
+
+    .cont-inicio .text {
+    padding-block: 90px;
+    gap: 24px;
+    }
+
+    .cont-inicio .text .comprimentos h1 {
+        font-size: 2.8em;
+    }
+
+    .cont-inicio .imagem {
+        height: 434px;
+        transform: translateY(4px);
+        margin-right: 0px;
+    }
+
+    .cont-inicio .imagem::before {
+      
+        bottom: 0px;
+        transform: rotate(-0deg);
+    }
+}
+
+@media (max-width: 750px) 
+{
+    .cont-inicio .imagem {
+        height: 434px;
+    }
+
+    .cont-inicio .text .comprimentos h2 {
+        font-size: 18px;
+    }
+
+    .cont-inicio .text .comprimentos h1 {
+        font-size: 2.5em;
+    }
+
+    .cont-inicio .text .comprimentos p {
+        padding-inline-start: 0px;
+        max-width: 400px;
+    }
+
+    .cont-inicio .text .botoes a {
+        padding: 5px 18px;
+    }
+
+    .sobre {
+        padding-top: 0px;
+        padding-inline-start: 0px;
+    }
+
+    .habilidades {
+        padding-bottom:70px ;
+    }
+
+    .habilidades h2 {
+        font-size: 20px;
+    }
+    .habilidades .lista-de-habilidades li {
+        width: 100px;
+    }
+
+    .habilidades .lista-de-habilidades li h3 {
+        font-size: 1em;
+        margin-top: 10px;
+    }
+
+    .servicos h2 {
+        font-size: 20px;
+    }
+
+    .what-i-do {
+        margin-left: 0;
+    }
+
+    .what-i-do .item h4 {
+        font-size: 1.3em;
+    }
+
+    .what-i-do .item {
+        border-radius: 14px;
+        padding: 10px ;
+    }
+
+    .projetos {
+        padding-inline: 10px;
+    }
+
+    .projetos h2 {
+        font-size: 20px;
+    }
+
+    .projetos .slide-de-projetos
+    {
+        padding-block: 32px;
+    }
+
+    .projetos .slide-de-projetos .slidess .slide .card-projet .sobre-projeto h4 {
+        font-size: 1em;
+    }
+
+    .projetos .slide-de-projetos .slidess .slide {
+
+        flex-wrap: wrap;
+    }
+    
+    .contato h2 {
+        font-size: 20px;
+    }
+
+    .content {
+
+        padding: 4em;
+    }
+    
+    .title {
+        font-size: 3rem;
+    }
+
+    .card {
+        width: 5rem;
+    }
+
+    .front, .back {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .conteudo {
+
+        gap: 10px;
+
+    }
+
+    .formulario h3 {
+      font-size: 16px;
+    }
+
+    .formulario .meter {
+
+        width: 222px;
+        height: 47px;
+    }
+
+    .formulario .meter label {
+        font-size: 12px;
+
+    }
 }
