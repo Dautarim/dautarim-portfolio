@@ -46,6 +46,36 @@ body::-webkit-scrollbar-thumb
     z-index: 100;
     transform: translateY(-50%);
     transition: opacity 1s ease-out;
+    
+}
+.navegador-alternativo .ativador
+{
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    transform: translateY(-50%);
+    box-shadow: 0px 4px 16px #25282d69;
+    background: var(--bac);
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navegador-alternativo .ativador ion-icon
+{
+    font-weight: 900;
+    font-size: 18px;
+    color: var(--principal);
+    transition: transform 1s ease;
+    transform: translateX(-5%);
+}
+
+.navegador-alternativo nav:hover .ativador ion-icon
+{
+    transform: rotate(180deg);
 }
 
 .navegador-alternativo.oculto
@@ -62,11 +92,12 @@ body::-webkit-scrollbar-thumb
     transform: translateX(70%);
     padding: 12px;
     box-shadow: 0px 24px 40px #25282d27;
+    
 }
 
 
 
-.navegador-alternativo:hover nav
+.navegador-alternativo nav:hover 
 {
     transform: translateX(10%);
 }
@@ -1404,5 +1435,219 @@ footer > p
     .formulario .meter label {
         font-size: 12px;
 
+    }
+
+        .navegador-alternativo nav
+    {
+
+        transform: translateX(95%);
+
+    }
+}
+
+@media (max-width: 700px) 
+{
+    .inicio header .menu  {
+       display: none;
+    }
+
+        .navegador-alternativo.oculto
+    {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .cont-inicio .text {
+        padding-block: 60px;
+    }
+
+    .cont-inicio .text .comprimentos h1 {
+        font-size: 2.3em;
+    }
+
+    .cont-inicio .text .comprimentos p {
+        max-width: 380px;
+    }
+}
+
+
+@media (max-width: 640px) 
+{
+    .cont-inicio .text .comprimentos p {
+        max-width: 300px;
+    }
+
+    .description {
+
+        padding: 4px 8px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 580px) 
+{
+    .cont-inicio .text .comprimentos h1 {
+        font-size: 2em;
+    }
+
+    .cont-inicio .text .comprimentos h2 {
+        font-size: 16px;
+    }
+
+    .projetos .slide-de-projetos {
+        height: 605px;       
+    }
+
+    .conteudo {
+        gap: 32px;
+        flex-wrap: wrap;
+    }
+
+    .formulario {
+        border-right: 0px solid var(--bac);
+
+    }
+
+    .formulario .meter {
+        width: 380px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 540px) 
+{
+    .inicio{
+       height: auto;
+    }
+    .cont-inicio {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cont-inicio .text {
+        padding-block: 0px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .cont-inicio .text .comprimentos p {
+        max-width: 100%;
+    }
+
+    .cont-inicio .text .botoes {
+        justify-content: center;
+    }
+
+    .cont-inicio .text .botoes a {
+        padding: 1px 12px;
+    }
+
+    .cont-inicio .text .botoes a ion-icon {
+        font-size: 16px;
+    }
+
+    .cont-inicio .text .botoes a p {
+        font-size: 12px;
+    }
+
+    .cont-inicio .imagem {
+        height: 335px;
+    }
+
+    .sobre .supercard {
+        gap: 10px;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+
+    .sobre {
+        padding-inline:24px;
+    }
+
+    .habilidades {
+        padding-bottom: 50px;
+        padding-inline: 20px;
+    }
+
+    .habilidades .lista-de-habilidades li {
+        width: 100px;
+        padding: 8px;
+    }
+
+    .habilidades .lista-de-habilidades li ion-icon {
+        font-size: 2em;
+    }
+
+    .habilidades .lista-de-habilidades li p{
+        font-size: .8em;
+    }
+
+    .what-i-do .item ion-icon {
+        font-size: 36px;
+        margin-bottom: 8px;
+    }
+
+    .what-i-do .item h4 {
+        font-size: 1em;
+    }
+
+    .what-i-do .item p {
+        font-size: .6em;
+        max-width: 135px;
+    }
+
+    footer .nome h2 {
+       font-size: 1em;
+    }
+}
+
+
+@media (max-width: 410px) 
+{
+    .inicio, .sobre, .projetos, .contato, .servicos {
+        padding-inline: 10px;
+    }
+
+    .formulario .meter {
+        width: 220px;
+        height: 32px;
+    }
+
+    .formulario .meter input {
+        padding: 4px;
+       
+    }
+
+    .formulario .meter label {
+        font-size: 12px;
+        padding: 0px;
+        top: -8px;
+        left: 4px;
+        transform: translateY(-50%);
+    }
+
+    .card {
+        margin: 0px;
+    }
+
+    .cards-rd {
+        gap: 20px;
+    }
+
+    .title {
+        font-size: 2rem;
+        transform: translateZ(2em);
+    }
+
+    .subtitle {
+       font-size: 12px;
+    }
+
+    .front, .back {
+      padding: 16px;
+    }
+
+    .content {
+        padding: 2.3em;
     }
 }
