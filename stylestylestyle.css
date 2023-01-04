@@ -1443,6 +1443,27 @@ footer > p
         transform: translateX(95%);
 
     }
+
+    .navegador-alternativo nav:hover
+    {
+        transform: translateX(95%);
+    }
+
+    .navegador-alternativo nav.aberto
+    {
+        transform: translateX(10%);
+    }
+
+        .navegador-alternativo nav:hover .ativador ion-icon
+    {
+        transform: rotate(0deg);
+    }
+
+    .navegador-alternativo nav.aberto .ativador.aberto ion-icon
+    {
+        transform: rotate(180deg);
+    }
+
 }
 
 @media (max-width: 700px) 

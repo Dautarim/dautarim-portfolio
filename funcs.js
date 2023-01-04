@@ -19,7 +19,7 @@ function rolaslide()
             if(i == contador)
             {
                 document.querySelector("#lbl"+i).classList.add("cx")
-                console.log("feito" + i)
+                // console.log("feito" + i)
             }
             else
             {
@@ -76,3 +76,13 @@ botenv.addEventListener("click", () => {
     }
 
 })
+
+
+function menutoogle()
+{
+    let botset = document.querySelector(".ativador")
+    let menumesmo = document.querySelector(".navegador-alternativo > nav")
+
+    botset.classList.toggle("aberto")
+    menumesmo.classList.toggle("aberto")
+}
