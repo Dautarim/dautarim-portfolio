@@ -24,6 +24,7 @@ html
 body
 {
     position: relative;
+    max-width: 1920px;
 }
 
 body::-webkit-scrollbar
