@@ -1,11 +1,14 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DOC3 — Designer & Developer</title>
-<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet">
-<style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOC3 — Designer & Developer</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
 --black:#030303;
@@ -215,381 +218,806 @@ section{padding:80px 24px}
 .skills-grid{grid-template-columns:repeat(2,1fr)}
 .lang-grid{grid-template-columns:1fr}
 }
-</style>
-</head>
-<body>
+</style> -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- CURSOR -->
+    <div id="cursor"></div>
+    <div id="cursor-trail"></div>
 
-<!-- CURSOR -->
-<div id="cursor"></div>
-<div id="cursor-trail"></div>
-
-<!-- LOADER -->
-<div id="loader">
-  <div class="loader-logo">DOC3</div>
-  <div class="loader-bar"><div class="loader-progress"></div></div>
-  <p style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(240,237,232,0.35);font-family:'Space Mono',monospace">CARREGANDO UNIVERSO...</p>
-</div>
-
-<!-- NAV -->
-<nav id="navbar">
-  <a href="#hero" class="nav-logo">D<span>O</span>C3</a>
-  <ul class="nav-links">
-    <li><a href="#about">Sobre</a></li>
-    <li><a href="#projects">Projetos</a></li>
-    <li><a href="#posts">Posts</a></li>
-    <li><a href="#contact">Contato</a></li>
-  </ul>
-  <a href="mailto:carvalhodeandrelino@gmail.com" class="btn-primary" style="font-size:11px;padding:10px 22px">Contato</a>
-</nav>
-
-<!-- HERO -->
-<section id="hero">
-  <div class="hero-bg"></div>
-  <div class="grid-lines"></div>
-  <div class="hero-content">
-    <span class="hero-tag">Designer & Dev — Guiné-Bissau → Brasil</span>
-    <h1 class="hero-title glitch" data-text="DOC3">
-      DOC<span class="accent">3</span>
-      <span class="line2">DESIGN.</span>
-    </h1>
-    <p class="hero-sub">Eu não faço só design. Eu construo <strong>universos visuais</strong>. Da tela ao código — cada pixel tem intenção.</p>
-    <div class="hero-ctas">
-      <a href="#projects" class="btn-primary">Ver Projetos</a>
-      <a href="#contact" class="btn-ghost">Vamos Criar</a>
-    </div>
-  </div>
-  <div class="hero-mascot">
-    <img src="/mnt/user-data/uploads/modelo_D3_01.png" alt="DOC3 mascot standing" onerror="this.style.display='none'">
-  </div>
-  <div class="hero-stats">
-    <div class="stat-item"><span class="stat-num">4+</span><span class="stat-label">Anos de Exp.</span></div>
-    <div class="stat-item"><span class="stat-num">25+</span><span class="stat-label">Projetos</span></div>
-    <div class="stat-item"><span class="stat-num">4</span><span class="stat-label">Idiomas</span></div>
-  </div>
-  <div class="scroll-indicator"><span>Rolar</span><div class="scroll-line"></div></div>
-</section>
-
-<!-- MARQUEE -->
-<div class="marquee-section">
-  <div class="marquee-track" id="marqueeTrack">
-    <span class="marquee-item"><span class="dot"></span>BRANDING</span>
-    <span class="marquee-item"><span class="dot"></span>UI DESIGN</span>
-    <span class="marquee-item"><span class="dot"></span>WEB DEV</span>
-    <span class="marquee-item"><span class="dot"></span>MOTION DESIGN</span>
-    <span class="marquee-item"><span class="dot"></span>3D CHARACTER</span>
-    <span class="marquee-item"><span class="dot"></span>FIGMA</span>
-    <span class="marquee-item"><span class="dot"></span>REACT</span>
-    <span class="marquee-item"><span class="dot"></span>IDENTIDADE VISUAL</span>
-    <span class="marquee-item"><span class="dot"></span>BRANDING</span>
-    <span class="marquee-item"><span class="dot"></span>UI DESIGN</span>
-    <span class="marquee-item"><span class="dot"></span>WEB DEV</span>
-    <span class="marquee-item"><span class="dot"></span>MOTION DESIGN</span>
-    <span class="marquee-item"><span class="dot"></span>3D CHARACTER</span>
-    <span class="marquee-item"><span class="dot"></span>FIGMA</span>
-    <span class="marquee-item"><span class="dot"></span>REACT</span>
-    <span class="marquee-item"><span class="dot"></span>IDENTIDADE VISUAL</span>
-  </div>
-</div>
-
-<!-- ABOUT -->
-<section id="about">
-  <div class="about-left">
-    <p class="section-eyebrow">Sobre mim</p>
-    <h2 class="section-title">DAUTARIM<br><span style="color:var(--accent)">ANDRELINO</span></h2>
-    <p class="about-desc">
-      Nascido na <strong>Guiné-Bissau</strong>, moldado pelo Brasil. Formando em <strong>Engenharia da Computação</strong> pela UNILAB, eu vivo na interseção entre código e arte. Não sou só designer — sou engenheiro visual que entende cada camada da experiência digital.
-    </p>
-    <p class="about-desc" style="margin-top:-24px">
-      Do <strong>Figma ao React</strong>, do conceito ao deploy. Construo marcas que existem no mundo real e interfaces que as pessoas sentem. Minha identidade é o DOC3 — e cada projeto carrega esse DNA único.
-    </p>
-    
-    <p style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:16px">Ferramentas & Skills</p>
-    <div class="skills-grid">
-      <div class="skill-chip">Figma</div>
-      <div class="skill-chip">Photoshop</div>
-      <div class="skill-chip">Canva</div>
-      <div class="skill-chip">React</div>
-      <div class="skill-chip">Node.js</div>
-      <div class="skill-chip">TypeScript</div>
-      <div class="skill-chip">HTML/CSS</div>
-      <div class="skill-chip">JavaScript</div>
-      <div class="skill-chip">CapCut</div>
+    <!-- LOADER -->
+    <div id="loader">
+      <div class="loader-logo">
+        <img src="imagens/logo nova branca - sem fundo.png" alt="logo_loader" />
+      </div>
+      <div class="loader-bar"><div class="loader-progress"></div></div>
+      <p
+        style="
+          font-size: 11px;
+          letter-spacing: 0.2em;
+          text-transform: uppercase;
+          color: rgba(240, 237, 232, 0.35);
+          font-family: &quot;Space Mono&quot;, monospace;
+        "
+      >
+        CARREGANDO UNIVERSO...
+      </p>
     </div>
 
-    <p style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:16px">Idiomas</p>
-    <div class="lang-grid">
-      <div class="lang-item"><span class="lang-name">Português</span><span class="lang-level">Fluente</span></div>
-      <div class="lang-item"><span class="lang-name">Criolo</span><span class="lang-level">Nativo</span></div>
-      <div class="lang-item"><span class="lang-name">Inglês</span><span class="lang-level">Intermediário</span></div>
-      <div class="lang-item"><span class="lang-name">Francês</span><span class="lang-level">Básico</span></div>
-    </div>
-  </div>
+    <!-- NAV -->
+    <nav id="navbar">
+      <a href="#hero" class="nav-logo">
+        <img src="imagens/logotipo nova branca cut.png" alt="LOGO">
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#projects">Projetos</a></li>
+        <li><a href="#posts">Posts</a></li>
+        <li><a href="#contact">Contato</a></li>
+      </ul>
+      <a
+        href="mailto:carvalhodeandrelino@gmail.com"
+        class="btn-primary"
+        style="font-size: 11px; padding: 10px 22px"
+        >Contato</a
+      >
+    </nav>
 
-  <div class="about-right">
-    <div class="about-mascot">
-      <div class="about-mascot-ring"></div>
-      <img src="/mnt/user-data/uploads/D3_002.png" alt="DOC3 mascot meditating" onerror="this.style.display='none'">
-    </div>
-    
-    <p style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:24px;margin-top:40px">Trajetória</p>
-    <div class="timeline">
-      <div class="timeline-item" style="animation-delay:0.1s">
-        <p class="tl-date">2025</p>
-        <p class="tl-title">Estagiário TI — PROPPG UNILAB</p>
-        <p class="tl-place">Redenção, Brasil · Pós-Graduação & Pesquisa</p>
-      </div>
-      <div class="timeline-item" style="animation-delay:0.2s">
-        <p class="tl-date">03 / 2024</p>
-        <p class="tl-title">Organizador — 1ª Semana da Computação UNILAB</p>
-        <p class="tl-place">Evento acadêmico & comunidade tech</p>
-      </div>
-      <div class="timeline-item" style="animation-delay:0.3s">
-        <p class="tl-date">2022</p>
-        <p class="tl-title">Dev Voluntário — Painel COVID-19</p>
-        <p class="tl-place">Portal de monitoramento de vacinação · UNILAB</p>
-      </div>
-      <div class="timeline-item" style="animation-delay:0.4s">
-        <p class="tl-date">2021–2025</p>
-        <p class="tl-title">Engenharia da Computação — UNILAB</p>
-        <p class="tl-place">Redenção CE · Formatura Dez/2025</p>
-      </div>
-      <div class="timeline-item" style="animation-delay:0.5s">
-        <p class="tl-date">2018</p>
-        <p class="tl-title">Ensino Médio — Cooperativa Escolar São José</p>
-        <p class="tl-place">Bissau, Guiné-Bissau</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- MASCOT DIVIDER -->
-<div class="mascot-divider">
-  <p class="divider-text">@SO_DOC3 · Instagram · (85) 994102604</p>
-  <img src="/mnt/user-data/uploads/D3.png" alt="DOC3 logo" class="divider-mascot" onerror="this.style.display='none'">
-  <p class="divider-text">github.com/dautarim</p>
-</div>
-
-<!-- PROJECTS -->
-<section id="projects" style="padding-top:80px">
-  <div class="projects-header">
-    <div>
-      <p class="section-eyebrow">Portfólio</p>
-      <h2 class="section-title">PROJETOS</h2>
-    </div>
-    <p style="font-size:13px;color:var(--muted);max-width:240px;text-align:right;line-height:1.7">Trabalhos de branding, UI e identidade visual</p>
-  </div>
-  <div class="projects-grid" id="projectsGrid">
-
-    <div class="project-card" onclick="openModal('Identidade DOC3','Branding','Sistema de identidade visual completo da marca DOC3 — da criação do ícone único até o design do personagem 3D. Um universo visual que mistura cultura afro-brasileira com estética tech futurista.')">
-      <div class="project-placeholder">
-        <img src="/mnt/user-data/uploads/logotipo_nova_branca.png" alt="DOC3 logo" style="width:60%;opacity:0.9;position:relative;z-index:1">
-      </div>
-      <span class="project-num">001</span>
-      <div class="project-overlay">
-        <p class="project-cat">Branding</p>
-        <p class="project-name">Identidade DOC3</p>
-        <p class="project-desc">Sistema visual completo — logo, ícone, cores e linguagem.</p>
-        <span class="project-btn">Ver Projeto</span>
-      </div>
-    </div>
-
-    <div class="project-card" onclick="openModal('Mascote 3D','Character Design','Design e modelagem do personagem 3D do DOC3 — um avatar futurista inspirado no criador, usando hoodie preta com a marca DOC3, cargo pants e Jordan 4s. Várias poses criadas para uso em mídias digitais.')">
-      <div class="project-placeholder">
-        <img src="/mnt/user-data/uploads/modelo_D3_01.png" alt="DOC3 character" style="height:100%;width:auto;object-fit:cover;position:relative;z-index:1">
-      </div>
-      <span class="project-num">002</span>
-      <div class="project-overlay">
-        <p class="project-cat">Character Design</p>
-        <p class="project-name">Mascote 3D</p>
-        <p class="project-desc">Avatar digital do DOC3 com múltiplas poses e variações.</p>
-        <span class="project-btn">Ver Projeto</span>
-      </div>
-    </div>
-
-    <div class="project-card" onclick="openModal('Portal COVID-19','Web Development','Portal de monitoramento de vacinação e transmissão da Covid-19 nos campi da UNILAB. Desenvolvimento front-end com dados em tempo real, gráficos interativos e design responsivo.')">
-      <div class="project-placeholder">
-        <div style="position:relative;z-index:1;text-align:center;padding:32px">
-          <p style="font-family:'Space Mono',monospace;font-size:11px;color:var(--accent);letter-spacing:0.15em;margin-bottom:12px">MONITORAMENTO</p>
-          <p style="font-family:'Bebas Neue',sans-serif;font-size:36px;color:var(--white)">COVID-19<br>TRACKER</p>
-          <p style="font-family:'Space Mono',monospace;font-size:10px;color:var(--muted);margin-top:8px">UNILAB · 2022</p>
+    <!-- HERO -->
+    <section id="hero">
+      <div class="hero-bg"></div>
+      <div class="grid-lines"></div>
+      <div class="hero-content">
+        <span class="hero-tag">Seja muito benvindo, eu sou</span>
+        <h1 class="hero-title glitch" data-text="DOC3">
+          DAUTA<span class="accent">RIM.</span>
+          <span class="line2">DESIGNER<span>&</span></span>
+          <span class="line2">PROGRAMDADOR.</span>
+        </h1>
+        <p class="hero-sub">
+          Eu não faço só design. Eu construo <strong>universos visuais</strong>.
+          Da tela ao código — cada pixel tem intenção.
+        </p>
+        <div class="hero-ctas">
+          <a href="#projects" class="btn-primary">Ver Projetos</a>
+          <a href="#contact" class="btn-ghost">Vamos Criar</a>
         </div>
       </div>
-      <span class="project-num">003</span>
-      <div class="project-overlay">
-        <p class="project-cat">Web Development</p>
-        <p class="project-name">Portal COVID-19</p>
-        <p class="project-desc">Dashboard de monitoramento epidemiológico em tempo real.</p>
-        <span class="project-btn">Ver Projeto</span>
+      <div class="hero-mascot">
+        <img
+          src="/mnt/user-data/uploads/modelo_D3_01.png"
+          alt="DOC3 mascot standing"
+          onerror="this.style.display = 'none'"
+        />
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num">4+</span
+          ><span class="stat-label">Anos de Exp.</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">25+</span
+          ><span class="stat-label">Projetos</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">4</span><span class="stat-label">Idiomas</span>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <span>Rolar</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee-section">
+      <div class="marquee-track" id="marqueeTrack">
+        <span class="marquee-item"><span class="dot"></span>BRANDING</span>
+        <span class="marquee-item"><span class="dot"></span>UI DESIGN</span>
+        <span class="marquee-item"><span class="dot"></span>WEB DEV</span>
+        <span class="marquee-item"><span class="dot"></span>MOTION DESIGN</span>
+        <span class="marquee-item"><span class="dot"></span>3D CHARACTER</span>
+        <span class="marquee-item"><span class="dot"></span>FIGMA</span>
+        <span class="marquee-item"><span class="dot"></span>REACT</span>
+        <span class="marquee-item"
+          ><span class="dot"></span>IDENTIDADE VISUAL</span
+        >
+        <span class="marquee-item"><span class="dot"></span>BRANDING</span>
+        <span class="marquee-item"><span class="dot"></span>UI DESIGN</span>
+        <span class="marquee-item"><span class="dot"></span>WEB DEV</span>
+        <span class="marquee-item"><span class="dot"></span>MOTION DESIGN</span>
+        <span class="marquee-item"><span class="dot"></span>3D CHARACTER</span>
+        <span class="marquee-item"><span class="dot"></span>FIGMA</span>
+        <span class="marquee-item"><span class="dot"></span>REACT</span>
+        <span class="marquee-item"
+          ><span class="dot"></span>IDENTIDADE VISUAL</span
+        >
       </div>
     </div>
 
-    <div class="project-card" onclick="openModal('Loobook DOC3','Motion & Content','Série de imagens do personagem DOC3 em diferentes variações de cor — hoodie verde, azul, cinza e preta. Mockups de product design e apresentação de marca para uso em redes sociais.')">
-      <div class="project-placeholder">
-        <img src="/mnt/user-data/uploads/D3_002.png" alt="DOC3 lookbook" style="height:100%;width:auto;object-fit:cover;position:relative;z-index:1">
-      </div>
-      <span class="project-num">004</span>
-      <div class="project-overlay">
-        <p class="project-cat">Motion & Content</p>
-        <p class="project-name">Lookbook DOC3</p>
-        <p class="project-desc">Variações do personagem para social media e branding.</p>
-        <span class="project-btn">Ver Projeto</span>
-      </div>
-    </div>
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="about-left">
+        <p class="section-eyebrow">Sobre mim</p>
+        <h2 class="section-title">
+          DAUTARIM<br /><span style="color: var(--accent)">ANDRELINO</span>
+        </h2>
+        <p class="about-desc">
+          Nascido na <strong>Guiné-Bissau</strong>, moldado pelo Brasil.
+          Formando em <strong>Engenharia da Computação</strong> pela UNILAB, eu
+          vivo na interseção entre código e arte. Não sou só designer — sou
+          engenheiro visual que entende cada camada da experiência digital.
+        </p>
+        <p class="about-desc" style="margin-top: -24px">
+          Do <strong>Figma ao React</strong>, do conceito ao deploy. Construo
+          marcas que existem no mundo real e interfaces que as pessoas sentem.
+          Minha identidade é o DOC3 — e cada projeto carrega esse DNA único.
+        </p>
 
-    <div class="project-card" onclick="openModal('UI Portfólio Web','UI/UX Design','Design e desenvolvimento do site portfólio DOC3 — experiência imersiva dark mode com animações fluidas, mascote integrado e interações cinematográficas.')">
-      <div class="project-placeholder">
-        <div style="position:relative;z-index:1;padding:24px;width:100%">
-          <div style="background:rgba(0,255,136,0.08);border:1px solid rgba(0,255,136,0.2);padding:16px;margin-bottom:10px">
-            <div style="height:8px;background:rgba(0,255,136,0.3);width:60%;margin-bottom:8px"></div>
-            <div style="height:6px;background:rgba(255,255,255,0.1);width:80%"></div>
+        <p
+          style="
+            font-size: 11px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 16px;
+          "
+        >
+          Ferramentas & Skills
+        </p>
+        <div class="skills-grid">
+          <div class="skill-chip">Figma</div>
+          <div class="skill-chip">Photoshop</div>
+          <div class="skill-chip">Canva</div>
+          <div class="skill-chip">React</div>
+          <div class="skill-chip">Node.js</div>
+          <div class="skill-chip">TypeScript</div>
+          <div class="skill-chip">HTML/CSS</div>
+          <div class="skill-chip">JavaScript</div>
+          <div class="skill-chip">CapCut</div>
+        </div>
+
+        <p
+          style="
+            font-size: 11px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 16px;
+          "
+        >
+          Idiomas
+        </p>
+        <div class="lang-grid">
+          <div class="lang-item">
+            <span class="lang-name">Português</span
+            ><span class="lang-level">Fluente</span>
           </div>
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
-            <div style="height:60px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08)"></div>
-            <div style="height:60px;background:rgba(123,97,255,0.1);border:1px solid rgba(123,97,255,0.2)"></div>
+          <div class="lang-item">
+            <span class="lang-name">Criolo</span
+            ><span class="lang-level">Nativo</span>
+          </div>
+          <div class="lang-item">
+            <span class="lang-name">Inglês</span
+            ><span class="lang-level">Intermediário</span>
+          </div>
+          <div class="lang-item">
+            <span class="lang-name">Francês</span
+            ><span class="lang-level">Básico</span>
           </div>
         </div>
       </div>
-      <span class="project-num">005</span>
-      <div class="project-overlay">
-        <p class="project-cat">UI/UX Design</p>
-        <p class="project-name">UI Portfólio Web</p>
-        <p class="project-desc">Este mesmo site — design system, UI e desenvolvimento.</p>
-        <span class="project-btn">Ver Projeto</span>
+
+      <div class="about-right">
+        <div class="about-mascot">
+          <div class="about-mascot-ring"></div>
+          <img
+            src="/mnt/user-data/uploads/D3_002.png"
+            alt="DOC3 mascot meditating"
+            onerror="this.style.display = 'none'"
+          />
+        </div>
+
+        <p
+          style="
+            font-size: 11px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 24px;
+            margin-top: 40px;
+          "
+        >
+          Trajetória
+        </p>
+        <div class="timeline">
+          <div class="timeline-item" style="animation-delay: 0.1s">
+            <p class="tl-date">2025</p>
+            <p class="tl-title">Estagiário TI — PROPPG UNILAB</p>
+            <p class="tl-place">Redenção, Brasil · Pós-Graduação & Pesquisa</p>
+          </div>
+          <div class="timeline-item" style="animation-delay: 0.2s">
+            <p class="tl-date">03 / 2024</p>
+            <p class="tl-title">Organizador — 1ª Semana da Computação UNILAB</p>
+            <p class="tl-place">Evento acadêmico & comunidade tech</p>
+          </div>
+          <div class="timeline-item" style="animation-delay: 0.3s">
+            <p class="tl-date">2022</p>
+            <p class="tl-title">Dev Voluntário — Painel COVID-19</p>
+            <p class="tl-place">
+              Portal de monitoramento de vacinação · UNILAB
+            </p>
+          </div>
+          <div class="timeline-item" style="animation-delay: 0.4s">
+            <p class="tl-date">2021–2025</p>
+            <p class="tl-title">Engenharia da Computação — UNILAB</p>
+            <p class="tl-place">Redenção CE · Formatura Dez/2025</p>
+          </div>
+          <div class="timeline-item" style="animation-delay: 0.5s">
+            <p class="tl-date">2018</p>
+            <p class="tl-title">Ensino Médio — Cooperativa Escolar São José</p>
+            <p class="tl-place">Bissau, Guiné-Bissau</p>
+          </div>
+        </div>
       </div>
+    </section>
+
+    <!-- MASCOT DIVIDER -->
+    <div class="mascot-divider">
+      <p class="divider-text">@SO_DOC3 · Instagram · (85) 994102604</p>
+      <img
+        src="/mnt/user-data/uploads/D3.png"
+        alt="DOC3 logo"
+        class="divider-mascot"
+        onerror="this.style.display = 'none'"
+      />
+      <p class="divider-text">github.com/dautarim</p>
     </div>
 
-    <div class="project-card" onclick="openModal('Branding Digital','Social Media Design','Criação de identidade visual para redes sociais, posts, stories e conteúdo digital com consistência de marca. Design orientado para engajamento e identidade forte.')">
-      <div class="project-placeholder">
-        <img src="/mnt/user-data/uploads/Gemini_Generated_Image_3h4a0s3h4a0s3h4a.png" alt="branding" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;opacity:0.7" onerror="this.remove()">
-        <div style="position:relative;z-index:1;text-align:center;padding:20px">
-          <img src="/mnt/user-data/uploads/logo_nova_branca.png" alt="logo" style="width:60px;opacity:0.8" onerror="this.style.display='none'">
-          <p style="font-family:'Bebas Neue',sans-serif;font-size:20px;margin-top:12px;color:var(--white)">SOCIAL DESIGN</p>
+    <!-- PROJECTS -->
+    <section id="projects" style="padding-top: 80px">
+      <div class="projects-header">
+        <div>
+          <p class="section-eyebrow">Portfólio</p>
+          <h2 class="section-title">PROJETOS</h2>
         </div>
+        <p
+          style="
+            font-size: 13px;
+            color: var(--muted);
+            max-width: 240px;
+            text-align: right;
+            line-height: 1.7;
+          "
+        >
+          Trabalhos de branding, UI e identidade visual
+        </p>
       </div>
-      <span class="project-num">006</span>
-      <div class="project-overlay">
-        <p class="project-cat">Social Media</p>
-        <p class="project-name">Branding Digital</p>
-        <p class="project-desc">Posts, stories e identidade para redes sociais.</p>
-        <span class="project-btn">Ver Projeto</span>
-      </div>
-    </div>
+      <div class="projects-grid" id="projectsGrid">
+        <div
+          class="project-card"
+          onclick="
+            openModal(
+              'Identidade DOC3',
+              'Branding',
+              'Sistema de identidade visual completo da marca DOC3 — da criação do ícone único até o design do personagem 3D. Um universo visual que mistura cultura afro-brasileira com estética tech futurista.',
+            )
+          "
+        >
+          <div class="project-placeholder">
+            <img
+              src="/mnt/user-data/uploads/logotipo_nova_branca.png"
+              alt="DOC3 logo"
+              style="width: 60%; opacity: 0.9; position: relative; z-index: 1"
+            />
+          </div>
+          <span class="project-num">001</span>
+          <div class="project-overlay">
+            <p class="project-cat">Branding</p>
+            <p class="project-name">Identidade DOC3</p>
+            <p class="project-desc">
+              Sistema visual completo — logo, ícone, cores e linguagem.
+            </p>
+            <span class="project-btn">Ver Projeto</span>
+          </div>
+        </div>
 
-  </div>
-</section>
+        <div
+          class="project-card"
+          onclick="
+            openModal(
+              'Mascote 3D',
+              'Character Design',
+              'Design e modelagem do personagem 3D do DOC3 — um avatar futurista inspirado no criador, usando hoodie preta com a marca DOC3, cargo pants e Jordan 4s. Várias poses criadas para uso em mídias digitais.',
+            )
+          "
+        >
+          <div class="project-placeholder">
+            <img
+              src="/mnt/user-data/uploads/modelo_D3_01.png"
+              alt="DOC3 character"
+              style="
+                height: 100%;
+                width: auto;
+                object-fit: cover;
+                position: relative;
+                z-index: 1;
+              "
+            />
+          </div>
+          <span class="project-num">002</span>
+          <div class="project-overlay">
+            <p class="project-cat">Character Design</p>
+            <p class="project-name">Mascote 3D</p>
+            <p class="project-desc">
+              Avatar digital do DOC3 com múltiplas poses e variações.
+            </p>
+            <span class="project-btn">Ver Projeto</span>
+          </div>
+        </div>
 
-<!-- POSTS -->
-<section id="posts" style="padding-left:0;padding-right:0">
-  <div class="posts-header">
-    <div>
-      <p class="section-eyebrow">Feed</p>
-      <h2 class="section-title">POSTS</h2>
-    </div>
-    <a href="https://instagram.com/so_doc3" target="_blank" class="btn-ghost" style="font-size:11px;padding:10px 20px">Ver Instagram</a>
-  </div>
-  <div class="carousel-track" id="carousel">
-    <div class="post-card">
-      <div class="post-inner" style="background:linear-gradient(135deg,#0d0d14,#1a1030)">
-        <img src="/mnt/user-data/uploads/modelo_D3_01.png" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.8">
-        <div class="post-content">
-          <p class="post-tag">Character Design</p>
-          <p class="post-title">DARK<br>MODE</p>
+        <div
+          class="project-card"
+          onclick="
+            openModal(
+              'Portal COVID-19',
+              'Web Development',
+              'Portal de monitoramento de vacinação e transmissão da Covid-19 nos campi da UNILAB. Desenvolvimento front-end com dados em tempo real, gráficos interativos e design responsivo.',
+            )
+          "
+        >
+          <div class="project-placeholder">
+            <div
+              style="
+                position: relative;
+                z-index: 1;
+                text-align: center;
+                padding: 32px;
+              "
+            >
+              <p
+                style="
+                  font-family: &quot;Space Mono&quot;, monospace;
+                  font-size: 11px;
+                  color: var(--accent);
+                  letter-spacing: 0.15em;
+                  margin-bottom: 12px;
+                "
+              >
+                MONITORAMENTO
+              </p>
+              <p
+                style="
+                  font-family: &quot;Bebas Neue&quot;, sans-serif;
+                  font-size: 36px;
+                  color: var(--white);
+                "
+              >
+                COVID-19<br />TRACKER
+              </p>
+              <p
+                style="
+                  font-family: &quot;Space Mono&quot;, monospace;
+                  font-size: 10px;
+                  color: var(--muted);
+                  margin-top: 8px;
+                "
+              >
+                UNILAB · 2022
+              </p>
+            </div>
+          </div>
+          <span class="project-num">003</span>
+          <div class="project-overlay">
+            <p class="project-cat">Web Development</p>
+            <p class="project-name">Portal COVID-19</p>
+            <p class="project-desc">
+              Dashboard de monitoramento epidemiológico em tempo real.
+            </p>
+            <span class="project-btn">Ver Projeto</span>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="post-card">
-      <div class="post-inner" style="background:linear-gradient(135deg,#0d1a0d,#0f2a1a)">
-        <img src="/mnt/user-data/uploads/D3_002.png" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.8">
-        <div class="post-content">
-          <p class="post-tag">Mood</p>
-          <p class="post-title">FOCUS<br>STATE</p>
-        </div>
-      </div>
-    </div>
-    <div class="post-card">
-      <div class="post-inner">
-        <img src="/mnt/user-data/uploads/logotipo_nova_branca.png" alt="" style="width:70%;position:relative;z-index:2;opacity:0.9">
-        <div class="post-content">
-          <p class="post-tag">Branding</p>
-          <p class="post-title">LOGO<br>SYSTEM</p>
-        </div>
-      </div>
-    </div>
-    <div class="post-card">
-      <div class="post-inner" style="background:linear-gradient(135deg,#140d1a,#1a0a2e)">
-        <img src="/mnt/user-data/uploads/Gemini_Generated_Image_23r3db23r3db23r3.png" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.7" onerror="this.style.display='none'">
-        <div class="post-content">
-          <p class="post-tag">Creative</p>
-          <p class="post-title">VISUAL<br>WORLD</p>
-        </div>
-      </div>
-    </div>
-    <div class="post-card">
-      <div class="post-inner" style="background:linear-gradient(135deg,#1a0d0d,#2a1010)">
-        <img src="/mnt/user-data/uploads/D3.png" alt="" style="width:60%;position:relative;z-index:2;filter:invert(1) opacity(0.8)">
-        <div class="post-content">
-          <p class="post-tag">Identity</p>
-          <p class="post-title">DOC3<br>ICON</p>
-        </div>
-      </div>
-    </div>
-    <div class="post-card">
-      <div class="post-inner">
-        <img src="/mnt/user-data/uploads/Gemini_Generated_Image_3h4a0s3h4a0s3h4a.png" alt="" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.7" onerror="this.style.display='none'">
-        <div class="post-content">
-          <p class="post-tag">Art Direction</p>
-          <p class="post-title">NEXT<br>LEVEL</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="carousel-controls">
-    <button class="carousel-btn" onclick="scrollCarousel(-1)">←</button>
-    <button class="carousel-btn" onclick="scrollCarousel(1)">→</button>
-  </div>
-</section>
 
-<!-- CONTACT -->
-<section id="contact">
-  <div class="contact-bg"></div>
-  <img src="/mnt/user-data/uploads/modelo_D3_01.png" class="footer-mascot" alt="" onerror="this.style.display='none'">
-  <div class="contact-inner">
-    <p class="section-eyebrow" style="justify-content:center;margin-bottom:24px">Contato</p>
-    <h2 class="contact-title">
-      VAMOS<br>
-      <span class="outline">CRIAR</span><br>
-      JUNTOS
-    </h2>
-    <p class="contact-sub">Designer que pensa como engenheiro. Engenheiro que age como artista. Se você quer algo que nunca viu antes — fala comigo.</p>
-    <a href="mailto:carvalhodeandrelino@gmail.com" class="contact-email">carvalhodeandrelino@gmail.com</a>
-    <div class="socials">
-      <a href="https://instagram.com/so_doc3" class="social-link" target="_blank">IG</a>
-      <a href="https://github.com/dautarim" class="social-link" target="_blank">GH</a>
-      <a href="tel:+5585994102604" class="social-link">TEL</a>
-    </div>
-    <div class="footer-bar">
-      <span class="footer-logo">D<span>O</span>C3</span>
-      <span class="footer-copy">© 2025 DOC3 · Dautarim Andrelino · Fortaleza CE</span>
-    </div>
-  </div>
-</section>
+        <div
+          class="project-card"
+          onclick="
+            openModal(
+              'Loobook DOC3',
+              'Motion & Content',
+              'Série de imagens do personagem DOC3 em diferentes variações de cor — hoodie verde, azul, cinza e preta. Mockups de product design e apresentação de marca para uso em redes sociais.',
+            )
+          "
+        >
+          <div class="project-placeholder">
+            <img
+              src="/mnt/user-data/uploads/D3_002.png"
+              alt="DOC3 lookbook"
+              style="
+                height: 100%;
+                width: auto;
+                object-fit: cover;
+                position: relative;
+                z-index: 1;
+              "
+            />
+          </div>
+          <span class="project-num">004</span>
+          <div class="project-overlay">
+            <p class="project-cat">Motion & Content</p>
+            <p class="project-name">Lookbook DOC3</p>
+            <p class="project-desc">
+              Variações do personagem para social media e branding.
+            </p>
+            <span class="project-btn">Ver Projeto</span>
+          </div>
+        </div>
 
-<!-- MODAL -->
-<div id="modal" onclick="closeModalOutside(event)">
-  <div class="modal-box" id="modalBox">
-    <button class="modal-close" onclick="closeModal()">×</button>
-    <p class="modal-tag" id="modalTag"></p>
-    <h2 class="modal-title" id="modalTitle"></h2>
-    <div class="modal-img"><p style="font-size:13px;color:var(--muted);letter-spacing:0.1em">PREVIEW DO PROJETO</p></div>
-    <p class="modal-desc" id="modalDesc"></p>
-    <div style="margin-top:28px;display:flex;gap:16px">
-      <a href="https://instagram.com/so_doc3" target="_blank" class="btn-primary" style="font-size:11px;padding:12px 24px">Ver no Instagram</a>
-      <button onclick="closeModal()" class="btn-ghost" style="font-size:11px;padding:11px 24px">Fechar</button>
-    </div>
-  </div>
-</div>
+        <div
+          class="project-card"
+          onclick="
+            openModal(
+              'UI Portfólio Web',
+              'UI/UX Design',
+              'Design e desenvolvimento do site portfólio DOC3 — experiência imersiva dark mode com animações fluidas, mascote integrado e interações cinematográficas.',
+            )
+          "
+        >
+          <div class="project-placeholder">
+            <div
+              style="position: relative; z-index: 1; padding: 24px; width: 100%"
+            >
+              <div
+                style="
+                  background: rgba(0, 255, 136, 0.08);
+                  border: 1px solid rgba(0, 255, 136, 0.2);
+                  padding: 16px;
+                  margin-bottom: 10px;
+                "
+              >
+                <div
+                  style="
+                    height: 8px;
+                    background: rgba(0, 255, 136, 0.3);
+                    width: 60%;
+                    margin-bottom: 8px;
+                  "
+                ></div>
+                <div
+                  style="
+                    height: 6px;
+                    background: rgba(255, 255, 255, 0.1);
+                    width: 80%;
+                  "
+                ></div>
+              </div>
+              <div
+                style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px"
+              >
+                <div
+                  style="
+                    height: 60px;
+                    background: rgba(255, 255, 255, 0.05);
+                    border: 1px solid rgba(255, 255, 255, 0.08);
+                  "
+                ></div>
+                <div
+                  style="
+                    height: 60px;
+                    background: rgba(123, 97, 255, 0.1);
+                    border: 1px solid rgba(123, 97, 255, 0.2);
+                  "
+                ></div>
+              </div>
+            </div>
+          </div>
+          <span class="project-num">005</span>
+          <div class="project-overlay">
+            <p class="project-cat">UI/UX Design</p>
+            <p class="project-name">UI Portfólio Web</p>
+            <p class="project-desc">
+              Este mesmo site — design system, UI e desenvolvimento.
+            </p>
+            <span class="project-btn">Ver Projeto</span>
+          </div>
+        </div>
 
-<script>
+        <div
+          class="project-card"
+          onclick="
+            openModal(
+              'Branding Digital',
+              'Social Media Design',
+              'Criação de identidade visual para redes sociais, posts, stories e conteúdo digital com consistência de marca. Design orientado para engajamento e identidade forte.',
+            )
+          "
+        >
+          <div class="project-placeholder">
+            <img
+              src="/mnt/user-data/uploads/Gemini_Generated_Image_3h4a0s3h4a0s3h4a.png"
+              alt="branding"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                inset: 0;
+                opacity: 0.7;
+              "
+              onerror="this.remove()"
+            />
+            <div
+              style="
+                position: relative;
+                z-index: 1;
+                text-align: center;
+                padding: 20px;
+              "
+            >
+              <img
+                src="/mnt/user-data/uploads/logo_nova_branca.png"
+                alt="logo"
+                style="width: 60px; opacity: 0.8"
+                onerror="this.style.display = 'none'"
+              />
+              <p
+                style="
+                  font-family: &quot;Bebas Neue&quot;, sans-serif;
+                  font-size: 20px;
+                  margin-top: 12px;
+                  color: var(--white);
+                "
+              >
+                SOCIAL DESIGN
+              </p>
+            </div>
+          </div>
+          <span class="project-num">006</span>
+          <div class="project-overlay">
+            <p class="project-cat">Social Media</p>
+            <p class="project-name">Branding Digital</p>
+            <p class="project-desc">
+              Posts, stories e identidade para redes sociais.
+            </p>
+            <span class="project-btn">Ver Projeto</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- POSTS -->
+    <section id="posts" style="padding-left: 0; padding-right: 0">
+      <div class="posts-header">
+        <div>
+          <p class="section-eyebrow">Feed</p>
+          <h2 class="section-title">POSTS</h2>
+        </div>
+        <a
+          href="https://instagram.com/so_doc3"
+          target="_blank"
+          class="btn-ghost"
+          style="font-size: 11px; padding: 10px 20px"
+          >Ver Instagram</a
+        >
+      </div>
+      <div class="carousel-track" id="carousel">
+        <div class="post-card">
+          <div
+            class="post-inner"
+            style="background: linear-gradient(135deg, #0d0d14, #1a1030)"
+          >
+            <img
+              src="/mnt/user-data/uploads/modelo_D3_01.png"
+              alt=""
+              style="
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                opacity: 0.8;
+              "
+            />
+            <div class="post-content">
+              <p class="post-tag">Character Design</p>
+              <p class="post-title">DARK<br />MODE</p>
+            </div>
+          </div>
+        </div>
+        <div class="post-card">
+          <div
+            class="post-inner"
+            style="background: linear-gradient(135deg, #0d1a0d, #0f2a1a)"
+          >
+            <img
+              src="/mnt/user-data/uploads/D3_002.png"
+              alt=""
+              style="
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                opacity: 0.8;
+              "
+            />
+            <div class="post-content">
+              <p class="post-tag">Mood</p>
+              <p class="post-title">FOCUS<br />STATE</p>
+            </div>
+          </div>
+        </div>
+        <div class="post-card">
+          <div class="post-inner">
+            <img
+              src="/mnt/user-data/uploads/logotipo_nova_branca.png"
+              alt=""
+              style="width: 70%; position: relative; z-index: 2; opacity: 0.9"
+            />
+            <div class="post-content">
+              <p class="post-tag">Branding</p>
+              <p class="post-title">LOGO<br />SYSTEM</p>
+            </div>
+          </div>
+        </div>
+        <div class="post-card">
+          <div
+            class="post-inner"
+            style="background: linear-gradient(135deg, #140d1a, #1a0a2e)"
+          >
+            <img
+              src="/mnt/user-data/uploads/Gemini_Generated_Image_23r3db23r3db23r3.png"
+              alt=""
+              style="
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                opacity: 0.7;
+              "
+              onerror="this.style.display = 'none'"
+            />
+            <div class="post-content">
+              <p class="post-tag">Creative</p>
+              <p class="post-title">VISUAL<br />WORLD</p>
+            </div>
+          </div>
+        </div>
+        <div class="post-card">
+          <div
+            class="post-inner"
+            style="background: linear-gradient(135deg, #1a0d0d, #2a1010)"
+          >
+            <img
+              src="/mnt/user-data/uploads/D3.png"
+              alt=""
+              style="
+                width: 60%;
+                position: relative;
+                z-index: 2;
+                filter: invert(1) opacity(0.8);
+              "
+            />
+            <div class="post-content">
+              <p class="post-tag">Identity</p>
+              <p class="post-title">DOC3<br />ICON</p>
+            </div>
+          </div>
+        </div>
+        <div class="post-card">
+          <div class="post-inner">
+            <img
+              src="/mnt/user-data/uploads/Gemini_Generated_Image_3h4a0s3h4a0s3h4a.png"
+              alt=""
+              style="
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                opacity: 0.7;
+              "
+              onerror="this.style.display = 'none'"
+            />
+            <div class="post-content">
+              <p class="post-tag">Art Direction</p>
+              <p class="post-title">NEXT<br />LEVEL</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-controls">
+        <button class="carousel-btn" onclick="scrollCarousel(-1)">←</button>
+        <button class="carousel-btn" onclick="scrollCarousel(1)">→</button>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="contact-bg"></div>
+      <img
+        src="/mnt/user-data/uploads/modelo_D3_01.png"
+        class="footer-mascot"
+        alt=""
+        onerror="this.style.display = 'none'"
+      />
+      <div class="contact-inner">
+        <p
+          class="section-eyebrow"
+          style="justify-content: center; margin-bottom: 24px"
+        >
+          Contato
+        </p>
+        <h2 class="contact-title">
+          VAMOS<br />
+          <span class="outline">CRIAR</span><br />
+          JUNTOS
+        </h2>
+        <p class="contact-sub">
+          Designer que pensa como engenheiro. Engenheiro que age como artista.
+          Se você quer algo que nunca viu antes — fala comigo.
+        </p>
+        <a href="mailto:carvalhodeandrelino@gmail.com" class="contact-email"
+          >carvalhodeandrelino@gmail.com</a
+        >
+        <div class="socials">
+          <a
+            href="https://instagram.com/so_doc3"
+            class="social-link"
+            target="_blank"
+            >IG</a
+          >
+          <a
+            href="https://github.com/dautarim"
+            class="social-link"
+            target="_blank"
+            >GH</a
+          >
+          <a href="tel:+5585994102604" class="social-link">TEL</a>
+        </div>
+        <div class="footer-bar">
+          <span class="footer-logo">D<span>O</span>C3</span>
+          <span class="footer-copy"
+            >© 2025 DOC3 · Dautarim Andrelino · Fortaleza CE</span
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- MODAL -->
+    <div id="modal" onclick="closeModalOutside(event)">
+      <div class="modal-box" id="modalBox">
+        <button class="modal-close" onclick="closeModal()">×</button>
+        <p class="modal-tag" id="modalTag"></p>
+        <h2 class="modal-title" id="modalTitle"></h2>
+        <div class="modal-img">
+          <p
+            style="font-size: 13px; color: var(--muted); letter-spacing: 0.1em"
+          >
+            PREVIEW DO PROJETO
+          </p>
+        </div>
+        <p class="modal-desc" id="modalDesc"></p>
+        <div style="margin-top: 28px; display: flex; gap: 16px">
+          <a
+            href="https://instagram.com/so_doc3"
+            target="_blank"
+            class="btn-primary"
+            style="font-size: 11px; padding: 12px 24px"
+            >Ver no Instagram</a
+          >
+          <button
+            onclick="closeModal()"
+            class="btn-ghost"
+            style="font-size: 11px; padding: 11px 24px"
+          >
+            Fechar
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- <script>
 // CURSOR
 const cursor=document.getElementById('cursor');
 const trail=document.getElementById('cursor-trail');
@@ -652,6 +1080,7 @@ const obs=new IntersectionObserver(entries=>{
   });
 },{threshold:0.2});
 items.forEach(i=>{i.style.opacity='0';i.style.transform='translateX(-20px)';i.style.transition='opacity 0.6s ease,transform 0.6s ease';obs.observe(i)});
-</script>
-</body>
+</script> -->
+    <script src="funcs.js"></script>
+  </body>
 </html>
