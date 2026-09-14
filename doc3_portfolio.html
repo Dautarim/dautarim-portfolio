@@ -8,6 +8,16 @@
       href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css"
+    />
     <!-- <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -254,14 +264,13 @@ section{padding:80px 24px}
         <li><a href="#about">Sobre</a></li>
         <li><a href="#projects">Projetos</a></li>
         <li><a href="#posts">Posts</a></li>
-        <li><a href="#contact">Contato</a></li>
+        <!-- <li><a href="#contact">Contato</a></li> -->
       </ul>
       <a
-        href="mailto:carvalhodeandrelino@gmail.com"
+        href="#contact"
         class="btn-primary"
         style="font-size: 11px; padding: 10px 22px"
-        >Contato</a
-      >
+        >Contato</a>
     </nav>
 
     <!-- HERO -->
@@ -290,7 +299,7 @@ section{padding:80px 24px}
       </div>
       <div class="hero-mascot">
         <img
-          src="D3/para o site cortado.png"
+          src="D3/meditate 01 sem fundo.png"
           alt="DOC3 mascot standing"
           onerror="this.style.display = 'none'"
         />
@@ -403,7 +412,7 @@ section{padding:80px 24px}
           </div>
           <div class="lang-item">
             <span class="lang-name">Inglês</span
-            ><span class="lang-level">Intermediário</span>
+            ><span class="lang-level">Avançado</span>
           </div>
           <div class="lang-item">
             <span class="lang-name">Francês</span
@@ -467,8 +476,8 @@ section{padding:80px 24px}
     </section>
 
     <!-- MASCOT DIVIDER -->
-    <div class="mascot-divider">
-      <p class="divider-text">@SO_DOC3 · Instagram · (85) 994102604</p>
+    <!-- <div class="mascot-divider">
+      <p class="divider-text">@SO_DOC3 · Instagram </p>
       <img
         src="/mnt/user-data/uploads/D3.png"
         alt="DOC3 logo"
@@ -476,7 +485,7 @@ section{padding:80px 24px}
         onerror="this.style.display = 'none'"
       />
       <p class="divider-text">github.com/dautarim</p>
-    </div>
+    </div> -->
 
     <!-- PROJECTS -->
     <section id="projects" style="padding-top: 80px">
@@ -494,7 +503,7 @@ section{padding:80px 24px}
             line-height: 1.7;
           "
         >
-          Trabalhos de branding, UI e identidade visual
+          Sites e sistemas web
         </p>
       </div>
       <div class="projects-grid" id="projectsGrid">
@@ -950,39 +959,43 @@ section{padding:80px 24px}
           class="section-eyebrow"
           style="justify-content: center; margin-bottom: 24px"
         >
-          Contato
+          Entre em contato
         </p>
         <h2 class="contact-title">
           VAMOS<br />
           <span class="outline">CRIAR</span><br />
           JUNTOS
         </h2>
-        <p class="contact-sub">
+        <!-- <p class="contact-sub">
           Designer que pensa como engenheiro. Engenheiro que age como artista.
           Se você quer algo que nunca viu antes — fala comigo.
-        </p>
-        <a href="mailto:carvalhodeandrelino@gmail.com" class="contact-email"
-          >carvalhodeandrelino@gmail.com</a
-        >
+        </p> -->
+        <a href="mailto:carvalhodeandrelino@gmail.com" class="contact-email">
+          <span id="email">carvalhodeandrelino@gmail.com</span>
+          <button class="copy-btn" onclick="copiarEmail(event)" aria-label="Copiar e-mail">
+              <i class="ph ph-copy"></i>
+          </button>
+        </a>
+
         <div class="socials">
           <a
             href="https://instagram.com/so_doc3"
             class="social-link"
             target="_blank"
-            >IG</a
+            >INSTAGRAM <i class="ph ph-instagram-logo"></i></a
           >
           <a
             href="https://github.com/dautarim"
             class="social-link"
             target="_blank"
-            >GH</a
+            >GITHUB <i class="ph ph-github-logo"></i></a
           >
-          <a href="tel:+5585994102604" class="social-link">TEL</a>
+          <a href="https://wa.me/+5585994102604" class="social-link">WHATSAPP <i class="ph ph-whatsapp-logo"></i></a>
         </div>
         <div class="footer-bar">
-          <span class="footer-logo">D<span>O</span>C3</span>
+          <span class="footer-logo"><img src="imagens/logo nova branca - sem fundo.png" alt=""></span>
           <span class="footer-copy"
-            >© 2025 DOC3 · Dautarim Andrelino · Fortaleza CE</span
+            >© 2026 DOC3 · Dautarim Andrelino · RECIFE PE</span
           >
         </div>
       </div>

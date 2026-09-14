@@ -89,3 +89,24 @@ items.forEach((i) => {
   i.style.transition = "opacity 0.6s ease,transform 0.6s ease";
   obs.observe(i);
 });
+
+function copiarEmail(event) {
+    // Impede o botão de abrir o mailto
+    event.preventDefault();
+    event.stopPropagation();
+
+    const email = "carvalhodeandrelino@gmail.com";
+    const botao = event.currentTarget;
+    const icone = botao.querySelector("i");
+
+    navigator.clipboard.writeText(email).then(() => {
+        // Troca o ícone de copiar pelo check
+        icone.classList.remove("ph-copy");
+        icone.classList.add("ph-check");
+
+        setTimeout(() => {
+            icone.classList.remove("ph-check");
+            icone.classList.add("ph-copy");
+        }, 1500);
+    });
+}

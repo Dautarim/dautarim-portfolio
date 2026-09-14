@@ -331,9 +331,9 @@ h1.hero-title .accent {
 }
 .hero-mascot {
   position: absolute;
-  right: 0;
-  bottom: 90px;
-  width: 40%;
+  right: 10%;
+    bottom: 10%;
+    width: 30%;
   z-index: 3000;
   animation: float 6s ease-in-out infinite;
 }
@@ -931,9 +931,51 @@ section {
   font-family: "Space Mono", monospace;
   font-size: 14px;
   color: var(--accent);
-  letter-spacing: 0.05em;
   margin-bottom: 56px;
   display: block;
+  padding: 12px;
+  border: 1px solid var(--glass-border);
+  text-decoration: none;
+}
+.contact-email {
+    width: 100%;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    color: #00ff99;
+    text-decoration: none;
+}
+
+.copy-btn {
+    position: absolute;
+    right: 15px;
+
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    background: transparent;
+
+    color: #fff;
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.copy-btn:hover {
+    color: #00ff99;
+    transform: scale(1.1);
 }
 .socials {
   display: flex;
@@ -942,16 +984,16 @@ section {
   margin-bottom: 80px;
 }
 .social-link {
-  width: 44px;
-  height: 44px;
+  padding: 8px 12px;
   background: var(--glass);
   border: 1px solid var(--glass-border);
   display: flex;
+  gap: 12PX;
   align-items: center;
   justify-content: center;
   text-decoration: none;
   color: var(--muted);
-  font-size: 14px;
+  font-size: 18px;
   transition:
     color 0.2s,
     border-color 0.2s,
@@ -959,6 +1001,9 @@ section {
   font-family: "Space Mono", monospace;
   font-size: 12px;
   letter-spacing: 0.05em;
+}
+.social-link i{
+font-size: 22px;
 }
 .social-link:hover {
   color: var(--accent);
@@ -973,13 +1018,10 @@ section {
   align-items: center;
 }
 .footer-logo {
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 32px;
-  letter-spacing: 0.12em;
-  color: var(--white);
+ width: 60px;
 }
-.footer-logo span {
-  color: var(--accent);
+.footer-logo img {
+  width: 100%;
 }
 .footer-copy {
   font-size: 12px;
